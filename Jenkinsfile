@@ -36,7 +36,7 @@ node{
 	    withCredentials([file(credentialsId: SERVER_KEY_CREDENTIALS_ID, variable: 'server_key_file')]) {
 
 		stage('Authorize to Salesforce') {
-			rc = command "${toolbelt}/sfdx auth:jwt:grant --instanceurl https://login.salesforce.com --clientid 3MVG9pRzvMkjMb6lSZXveI54gmUzVSHO1jDFPKhRCPq3v68enpjIxC7lBGs9mi2bh5XEUESdq8Vy1d3_gEsPq --jwtkeyfile ${server_key_file} --username shivam@nagarro.com --setalias shivam@nagarro.com"
+			rc = command "${toolbelt}/sfdx auth:jwt:grant --instanceurl https://login.salesforce.com --clientid 3MVG9pRzvMkjMb6lvTcBboEoElb79uOfmWIpUowceAjVRB_EewrIQIHgsapkZcADt0WMT5zAr8EmqdG2tSnLI --jwtkeyfile ${server_key_file} --username amritsuman@nagarro.com --setalias amritsuman@nagarro.com"
 		    if (rc != 0) {
 			error 'Salesforce org authorization failed.'
 		    }
